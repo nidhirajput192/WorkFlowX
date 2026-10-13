@@ -12,11 +12,17 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const contactRoutes = require("./routes/contactRoutes");
 
+
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    "https://workflowx-frontend-xhwb.onrender.com"
+  ],
 }));
+
 app.use(express.json());
+
 
 // Request logging
 app.use((req, res, next) => {

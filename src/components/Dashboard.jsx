@@ -533,17 +533,19 @@ function Dashboard() {
                   Profile
                 </Link>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    localStorage.removeItem("token");
-                    localStorage.removeItem("user");
-                    window.location.href = "/login";
-                  }}
-                  className="rounded-xl border border-rose-400/20 bg-rose-500/[0.07] px-3 py-2 text-sm font-medium text-rose-300 transition hover:bg-rose-500/15 sm:px-4"
-                >
-                  Logout
-                </button>
+                
+<button
+  type="button"
+  onClick={() => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    window.location.replace("/");
+  }}
+  className="rounded-xl border border-rose-400/20 bg-rose-500/[0.07] px-3 py-2 text-sm font-medium text-rose-300 transition hover:bg-rose-500/15 sm:px-4"
+>
+  Logout
+</button>
+
               </div>
             </div>
           </header>
